@@ -15,7 +15,7 @@ OUTPUT_FILE = os.path.join(__dir__, "output.csv")
 
 def main():
     driver = utils.get_driver()
-    os.makedirs(MEDIA_DIR, exists_ok=True)
+    os.makedirs(MEDIA_DIR, exist_ok=True)
     config_sv = {
                 "lang": "sv-SE",
                 "voice": "Astrid"
@@ -61,6 +61,7 @@ def request_sentence(sentence, output_file, cookies, config):
         r_content = json.loads(r.content.decode('utf-8', 'ignore'))
         slug = r_content['slug']
         media = requests.get("https://www.gosubtitle.com/temp-download-media/" + slug)
+        print("Writing file {}".format(output_file))
         with open(output_file, 'wb') as f:
             f.write(media.content)
     else:
