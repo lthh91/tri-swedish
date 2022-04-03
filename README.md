@@ -1,6 +1,6 @@
 ## How to download
 
-[how-to-download.png]
+![how-to-download.png](how-to-download.png)
 
 ## How to use
 1. Investigate how to install geckodriver in your operating system. For e.g., here seems to be a detailed instruction http://www.learningaboutelectronics.com/Articles/How-to-install-geckodriver-Python-windows.php
